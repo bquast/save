@@ -1,4 +1,4 @@
 Name: Save Objects
 Description: RStudio Addin to Save Objects from Environment to File
-Binding: savewidget
+Binding: saveobjects
 Interactive: true
