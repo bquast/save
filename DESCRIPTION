@@ -10,6 +10,6 @@ Imports:
     shiny,
     miniUI,
     DT
-License: GPl-3
+License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 5.0.1
