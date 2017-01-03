@@ -1,5 +1,5 @@
 #' RStudio Addin to Save Object from Environment to File
-#' @name savewidget
+#' @name save.objects
 #' @export
 #' @import shiny miniUI
 #' @examples
@@ -27,7 +27,6 @@ save.objects <- function() {
 
     observeEvent(input$done, {
       names <- as.character(objects[input$tbl_rows_selected, 1])
-      # packages <- pkgs[input$tbl_rows_selected, 1]
       filename <- input$filename
       stopApp( save(list = names, file = filename)  )
     })
