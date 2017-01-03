@@ -1,4 +1,4 @@
-Package: save
+Package: save.objects
 Title: RStudio Addin to Save Objects from Environment to File
 Version: 0.0.0.9000
 Authors@R: person("Bastiaan", "Quast", email = "bquast@gmail.com", role = c("aut", "cre"))
