@@ -1,7 +1,7 @@
 #' RStudio Addin to Save Object from Environment to File
 #' @name savewidget
 #' @export
-#' @import shiny miniUI DT
+#' @import shiny miniUI
 
 saveobjects <- function() {
 
@@ -9,6 +9,7 @@ saveobjects <- function() {
   ui <- miniPage(
     miniTitleBar('Select Objects to Save', right=miniTitleBarButton('done', 'Save', primary = TRUE)),
     miniContentPanel(
+      textInput('filename', label = 'Save as:', value = '.RData'),
       DT::dataTableOutput('tbl')
     )
   )
@@ -19,13 +20,13 @@ saveobjects <- function() {
     objects <- data.frame(objects = ls(.GlobalEnv))
 
     output$tbl = DT::renderDataTable(
-      objects, options = list(lengthChange = FALSE, paging=FALSE, autoWidth = TRUE)
+      objects, options = list(lengthChange = FALSE, paging=FALSE, autoWidth = TRUE, searching=FALSE)
     )
 
     observeEvent(input$done, {
       names <- as.character(objects[input$tbl_rows_selected, 1])
       # packages <- pkgs[input$tbl_rows_selected, 1]
-      filename <- 'bla.RData'
+      filename <- input$filename
       stopApp( save(list = names, file = filename)  )
     })
 
