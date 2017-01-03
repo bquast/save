@@ -1,2 +1,2 @@
 # save
-An RStudio addin to save object from the Global Environment
+An RStudio addin to save objects from the Global Environment to a file.

@@ -1,0 +1,8 @@
+Package: save
+Title: RStudio Addin to Save Objects from Environment to File
+Version: 0.0.0.9000
+Authors@R: person("Bastiaan", "Quast", email = "bquast@gmail.com", role = c("aut", "cre"))
+Description: An RStudio addin to save objects from the Global Environment to a file.
+Depends: R (>= 3.3.2)
+License: GPl-3
+Encoding: UTF-8
