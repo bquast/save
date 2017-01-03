@@ -19,10 +19,10 @@ save.objects <- function() {
   # server
   server <- function(input, output, session) {
 
-    objects <- data.frame(objects = ls(.GlobalEnv))
+    objects <- data.frame(Environment = ls(.GlobalEnv))
 
     output$tbl = DT::renderDataTable(
-      objects, options = list(lengthChange = FALSE, paging=FALSE, autoWidth = TRUE, searching=FALSE)
+      objects, options = list(lengthChange = FALSE, paging=FALSE, searching=FALSE)
     )
 
     observeEvent(input$done, {
