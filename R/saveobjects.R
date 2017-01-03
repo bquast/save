@@ -2,6 +2,8 @@
 #' @name savewidget
 #' @export
 #' @import shiny miniUI
+#' @examples
+#' \dontrun{saveobjects()}
 
 saveobjects <- function() {
 

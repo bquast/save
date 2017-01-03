@@ -10,4 +10,7 @@ saveobjects()
 \description{
 RStudio Addin to Save Object from Environment to File
 }
+\examples{
+\dontrun{saveobjects()}
+}
 
