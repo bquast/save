@@ -5,7 +5,7 @@
 #' @examples
 #' \dontrun{saveobjects()}
 
-saveobjects <- function() {
+save.objects <- function() {
 
   # ui
   ui <- miniPage(
